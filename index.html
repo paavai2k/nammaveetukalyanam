@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Namma veetu kalyanam </title>
+  <link rel="stylesheet" href="<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+ </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'poppins',sans-serif;
+  scroll-behavior: smooth;
+}
+section 
+{
+  padding: 100px;
+}
+.banner
+{
+  position: relative;
+  min-height: 100vh;
+  background-image: url('image2.jpg');
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner h2 
+{
+  font-size: 3em;
+  color:#fff;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+.banner h2 span
+{
+  font-size:1.5em;
+  font-weight:700;
+}
+.banner h3
+{
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 500;
+}
+.btn
+{
+  position: relative;
+  background:#2196f3;
+  display:inline-block;
+  color:#fff;
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration:none;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+header
+{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:40px 100px;
+  z-index: 1000;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+header .sticky
+{
+  background: #fff;
+  padding: 20px 100px;
+  box-shadow:0 5px  20px rgba(0,0,0,1);
+}
+header .logo
+{
+  color:#fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+header .sticky.logo
+{
+  color:#111;
+}
+header ul
+{
+  position:relative;
+  display: flex;
+}
+header ul li
+{
+  position: relative;
+  list-style: none;
+} 
+header ul li a
+{
+    position:relative;
+    display: inline-block;
+    margin:0 15 px;
+    color:#fff;
+}
+.heading
+  {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  color:#111;
+}
+.header h2
+{
+  font-weight: 600;
+  font-size: 30px;
+}
+.content
+{
+  display: flex;
+  justify-content: space-between;
+}
+.contentBx
+{
+  padding-right: 30px;
+}
+.content Bx h3
+{
+  font-size: 2px;
+  margin-bottom: 10px;
+}
+.w50
+{
+  min-width: 50%;
+}
+img
+{
+  max-width: 100%;
+}
+.services
+{
+  background: #111;
+}
+.heading .white
+{
+  color:#fff;
+}
+.services .content
+{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.serices .content serviceBx
+{
+  padding:40px 20px;
+  background: #222;
+  color:#fff;
+  max-width: 340px;
+  margin:20px;
+  text-align: center;
+  transition: 0.5s;
+}
+.services .content .serviceBx:hover
+{
+  background: #219613;
+}
+.services .content .serviceBx img
+{
+  max-width: 80px;
+  filter:invert(1);
+}
+.services .content .serviceBx h2
+{
+  font-size: 20px;
+  font-weight:600;
+}
+.work .content
+{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.work .content .workBx
+{
+  width: 50%;
+  padding:20px;
+}
+.work .content .workBx img
+{
+  max-width: 100%;
+}
+.contact
+{
+  background: #111;
+}
+.formBx
+{
+  min-width: 60%;
+}
+.formBx form
+{
+  display:flex;
+  flex-direction: column;
+}
+.formBx form h3,
+.contact info h3
+{
+color:#fff;
+font-size: 20px;
+font-weight: 500;
+margin-bottom: 10px;
+}
+.formBx form input,
+.formBx form textarea
+{
+  margin-bottom:20px;
+  padding: 15px;
+  font-size: 16px;
+  background: transparent;
+  border:none;
+  outline:none;
+  background:#222;
+  color:#fff;
+  resize:none;
+}
+.formBx form textarea
+{
+  min-height: 200px;
+}
+.formBx form input::placeholder,
+.formbx form textarea::placeholder
+{
+  color:#999;
+}
+.formBx form input[type="submit"]
+{
+  max-width: 100px;
+  background: #2196f3;
+  cursor:pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contactinfo
+{
+  min-width: 40%;
+}
+.contact InfoBx
+{
+  position: relative;
+}
+.contactInfoBx .formBx
+{
+  position: relative;
+  padding:20px 0;
+  display:flex;
+}
+.contactInfoBx .box .icon
+{
+  min-width: 40px;
+  padding-top: 4px;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 24px;
+}
+.contactinfoBx .box .text
+{
+  display:flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color:#fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+.contactInfoBx .box .text h3
+{
+  font-weight: 500;
+  color:#2196f3;
+  margin-bottom: 0;
+}
+@media(max-width:999px)
+{
+  header,
+  header sticky
+  {
+    padding:20px 50px;
+    z-index:1000;
+  }
+  .menu
+  {
+    position:fixed;
+    top:75px;
+    left:100%;
+    display:block;
+    padding:100px 50px;
+    text-align: center;
+    width:100%;
+    height:100vh;
+    background: #fff;
+    transition:0.5s;
+    z-index: 999;
+    border-top: 1px solid rgba(0,0,0,0.2);
+  }
+  .menu .active
+  {
+    left:0%;
+  }
+  header ul li a
+  {
+    color:#111;
+    font-size: 24px;
+    margin: 10px;
+  }
+  .toggle
+  {
+    width: 40px;
+    height: 40px;
+    background: url('menu.png');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:30px;
+    cursor:pointer;
+  }
+  .toggle .active
+  {
+    background:url('close.png');
+    background-position: center;
+    background-size: 25px;
+    cursor:pointer;
+  }
+  header .sticky .toggle
+  {
+    filter:invert(1);
+  }
+  section
+  {
+    padding:100px 50px;
+  }
+  .banner
+  {
+    padding:100px 50px 100px;
+  }
+  .banner h2
+  {
+    font-size: 1em;
+  }
+  .btn
+  {
+    margin-top: 10px;
+    padding:10px 20px;
+    font-size: 16px;
+  }
+  heading h2
+  {
+    font-size: 24px;
+  }
+  .contentBx h3
+  {
+    font-size: 20px;
+  }
+
+.content
+{
+  flex-direction: column;
+}
+  .w50
+  {
+    margin-bottom: 20px;
+ } 
+
+.services .content .serviceBx
+{
+  margin:10px;
+}
+.work .content .workBx
+{
+  width: 100%;
+  padding:10px
+}
+.contactInfo
+{
+  min-width: 40%;
+  margin:20px 0;
+}
+@media (max-height:600px)
+{
+  header,
+  header.sticky
+  {
+    padding:20px 20px;
+  }
+  .banner
+  {
+    padding:150px 50px 100px;
+  }
+  section
+  {
+    padding: 100px 20px;
+  }
+}
+    </style>
+    <header>
+      <a href="#" class="logo">MATRIMONY</a>
+      <div class="toggle" onclick="togglemenu()">
+        </div>
+        <ul class="menu">
+            <li><a href="#home" onclick="togglemenu()";Home</a></li> 
+            <li><a href="#About" onclick="togglemenu()";About</a></li>
+              <li><a href="#services" onclick="togglemenu()";services</a></li>
+                <li><a href="#works" onclick="togglemenu()";Works</a></li>
+                  <li><a href="#Contact" onclick="togglemenu()";Contact</a></li>
+                    </ul>
+      </header>
+      <section class="banner" id="Home">
+        <div class="textBx">
+          <h2> Namma veetu kalyanam</h2>
+          <h3>Living is a once-in-a lifetime generational</h3>
+          <a href="#about" class="btn">About Me</a>
+          </div>
+        </section>
+        <section class="about" id="about">
+          <div class="heading">
+            <h2> about me</h2>
+            </div>
+            <div class="content"></div>
+            <div class="contentBx w50">
+              </div>
+            <h3>SUBAM MARIMUTHU is one of the renowned Astrologers in Tiruchengode. He uses Advanced System of Significations System.</h3>
+              <p>" Subam marimuthu is a well-known Astrologer in Tiruchengode. He has excellent knowledge in the field of Astrology. He leads the Tamil Jothida Nilayam, and he explains everything with your planetary positions, that anyone can easily understand. He provides clear and detailed horoscope analysis with great accuracy. Rathinam Sundararajan can tell all details about your life without any hints from your side. He uses a unique technique of calculating the positive and negative periods of life.<br><br>TAMIL JOTHIDA NILAYAM - Astrology, Love Marriage, Marriage Match Making, Career, Business, Husband and Wife Disputes, Horoscope Making, Health Problem Solution, Family Problems, Birth Chart & Job"</p>
+              </div>
+              <div class="w50">
+              </div>
+              <img src="123.jpg" class="img">
+              </div>
+          </section>
+          <section class="services" id=services">
+            <div class="heading white">
+              <h2>Our services</h2>
+              <p>Wedding Planning consists of various duties to be taken care of that can make your special event hectic. A planner can help save the day according to your taste and preferences for you to have been left feeling content about your event.</p>
+              <div clss="content">
+                <div class="serviceBx">
+                  <img src="mahal.jpg">
+                  <h2>namma veetu kalyanam mahal </h2>
+                  <p>Every great dream begins with a dreamer. The company has strength and the passion to reach for the star and the company venturing into new innovation and ideas to bring business into clash by the team of well endeavored and dedicated staff. They have a burning desire and passion in heart to achieve great heights. To Provide Innovative Super Special Facilities to The Society With Quality Infrastructure Their innovative dream and ideas in to make a better future for the company and people of Tamil Nadu.
+
+The company soul is filled with noting but passion, determination, dedication, hard work, self discipline and efforts to long with pride and dignity. The company ceaselessly musing, venturing and seeking to turn customer dream come true in to reality . Thus we make Tamil Nadu a better place for the citizens.</p>
+                  </div>
+              </div>
+              <div clss="content">
+                <div class="serviceBx">
+                  <img src="welcome.jpg">
+                  <h2>specifically acknowledge and welcome any important guests.</h2>
+                  <p>one of the leading and most trusted matrimony websites in India. Making happy marriages happen... Matrimony understands the importance of choosing the right partner for marriage, especially in the Indian cultural setup. It believes in providing the most secure and convenient matchmaking experience to all its members by ensuring 100% screening,exclusive privacy options, photo protection features and verification of phone numbers and more information. While the online matrimonial site connects millions of people directly, It also maintains a dedicated Customer Care team and offers offline Match Point Centers across the country, for deeper and personal interaction with prospective brides, grooms and /or families.</p>
+                  </div>
+              </div>
+              <div clss="content">
+                <div class="serviceBx">
+                  <img src="photoshop.jpg">
+                  <h2>high-resolution team photos, corporate event photography and product photography</h2>
+                  <p>High-quality photography is critical in capturing and engaging the attention of your online audience. Professionally shot, recent photos of your team and location help you build trust online. A library of high-resolution images including event photography, lifestyle photography and corporate photography empowers both your digital marketing strategy and your website’s visual storytelling. Of course, you probably already know that top-quality product photography is a big factor in boosting ecommerce conversions</p>
+                  </div>
+              </div>
+              <div clss="content">
+                <div class="serviceBx">
+                  <img src="food.jpg">
+                  <h2>Great meals fill us up and make us happy. And sharing those notable meals allows us to form life-long memories with family and friends.</h2>
+                  <p>Flexibility is a great attribute for a caterer to possess. While most offer “sample menus” to get you started on the process of considering what you wish to offer, a great caterer is willing to sit down and talk to you about other options that might better fit your needs or fulfill your vision.
+
+And then there’s the nitty-gritty. Be sure that you are provided with a detailed contract outlining everything that’s necessary to make your day go as smoothly as possible, including not only the menu but also items such as what kind of tableware will be provided, what time the caterer will arrive, and how cancellations will be handled if the need arises.
+
+Most of all, don’t hesitate to ask for the opportunity to taste the food to be offered and also seek the names of parties that have already used the services of the caterer you’re considering. While online reviews can be helpful, it’s always a good idea to talk to satisfied parties via telephone to be sure you’re getting the real story from a real client.
+
+Share this entry
+</p>
+                  </div>
+              </div>
+              <div clss="content">
+                <div class="serviceBx">
+                  <img src="mehandhi.jpg">
+                  <h2>Family Is Where Our Story Begins</h2>
+                  <p>There is no better way to elaborate the significance of these delicate henna designs which blossom on the palms and feet of a bride-to-be. A traditional aspect of the ancient Solah Shringaar, the Mehndi is an inalienable part of an Indian bride's wedding look. And so's the ritual around it. We pay homage here to the Mehndi ceremony, explaining what it's all about and how you would find it in every cultural sub-set in IndiaHeld a day before the actual wedding, the Mehndi ceremony is a fun-filled, nostalgic sit-down for the bride, her cousins, siblings, friends, aunts and others. This is their day, filled with fun, laughter, songs, dances and games as each sits down for a dollop of Mehndi over their hands and feet.
+
+Often held on a sunny day outdoors, the Mehndi ceremony actually occurs for both the bride and the groom on the same day. Nowadays, many brides-to-be choose to do one combined mehndi function, for double the madness and fun!.</p>
+                  </div>
+              </div>
+              <div clss="content">
+                <div class="serviceBx">
+                  <img src="feel.jbg">
+                  <h2>“Walking with your hands in mine and mine in yours, that's exactly where I want to be always.”</h2>
+                  <p> “I love you without knowing how, or when, or from where. I love you simply, without problems or pride: I love you in this way because I do not know any other way of loving but this, in which there is no I or you, so intimate that your hand upon my chest is my hand, so intimate then when I fall asleep your eyes close.”<br><br>“I am nothing special, of this I am sure. I am a common man with common thoughts and I’ve led a common life. There are no monuments dedicated to me and my name will soon be forgotten, but I’ve loved another with all my heart and soul, and to me, this has always been enough.”</p>
+                  </div>
+              </div>
+            </section>
+            <section class="work" id="work">
+              <div class="heading white">
+                <h2>Our Latest Work</h2>
+                <p>claims to divine information about human affairs and terrestrial events by studying the movements and relative positions of celestial objects.</p>
+                </div>
+                <div class="content">
+                  <div class="workBx">
+                    <img src="vedic.png">
+                    </div>
+                     </div>
+                </div>
+                <div class="content">
+                  <div class="workBx">
+                    <img src="child-birth.png">
+                    </div>
+                     </div>
+                     <div class="content">
+                  <div class="workBx">
+                    <img src="numerology.png">
+                    </div>
+                     </div>
+                     <div class="content">
+                  <div class="workBx">
+                    <img src="vastu.png">
+                    </div>
+                     </div>
+<div class="header white">
+  <a href="#" class="btn">view more</a>
+  </div>
+  <section class="contact" id="contact">
+    <div class="heading white">
+      <h2>contact us</h2>
+      <p>Contact Pages are important for gathering store feedback. ... Original content is important for SEO and building your customer loyalty</p>
+      </div>
+      <div class="content">
+        <div class="contact info">
+          <h3>contactInfo</h3>
+          <div class="contactinfoBx">
+            <div class="box">
+            <div class="icon">
+              <i class="fa-fa-map-market"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text">
+            <h3>Adress</h3>
+            <p>s.s.c tower,
+              new court,
+              sankakiri Road</p>
+            <div class="box">
+              <div class="icon">
+                <i clas="fa-fa-phone"></i>
+                </div>
+            </div>
+            <div class="text">
+              <h3>phone</h3>
+              <p>9361388202</p>
+              </div>
+              <div class="box">
+                <div class="fa-fa-envelope-o">
+                  </div>
+              </div>
+              <div class="text">
+                <h3>email</h3>
+                <p>astromarimuthu.a@gmail.com</p>
+                </div>
+                <div class="formBx">
+                </div>
+                <form>
+                  <h3>Message me</h3>
+                  <input type="text" name="" placeholder="fullname">
+                  <input type="email"name="" placeholder="email">
+                  <textarea placeholder="your message">
+                    </textarea>
+                    <input type="submit" value="send">
+                    </form>
+                    </div>
+    </section>
+    <script type="text/javascript">
+      window.addEventListener('scroll',function()
+      {
+        var header=document.querySelector('header');
+        header.classlist.toggle('sticky',window.scrollY > 0);
+      });
+function togglemenu()
+{
+  var menutoggle=document.querySelector('.toggle');
+  var menutoggle=document.querySelector('.menu');
+  menutoggle.classlist.toggle('active');
+  menutoggle.classlist.toggle('active');
+}
+      
+      </script>
+  </body>
+</style>
